@@ -1,0 +1,255 @@
+.filters {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+    padding: 40px 0px;
+
+    &__block {
+        
+        padding: 10px 20px;
+        background-color: $color-filters;
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+    }
+
+    &__title {
+        text-align: left;
+        text-transform: uppercase;
+        @include font(2rem, 6rem, 400, normal);
+
+    }
+
+    &__subtitle {
+        @extend %font-secondary;
+        @extend %font-color;
+        @include font(2rem, 4rem, 400, normal);
+        display: block;
+    }
+
+    &__button,
+    &__select {
+        @extend %font-secondary;
+    padding: 7px 20px 5px;
+    @extend %font-color;
+    @include font(1.8rem, 2.2rem, 400, normal);
+    border-radius: 20px;
+    @extend %blurBg;
+    @extend %border;
+
+    & option {
+        background-color: $color-options;
+    }
+    }
+    &__button {
+        cursor: pointer;
+    }
+}
+
+
+
+.option_filters {
+
+    & div {
+        display: flex;
+        align-items: center;
+    }
+
+    & button {
+        cursor: pointer;
+    }
+
+    
+}
+
+.shape_filters {
+  
+    & button:nth-child(2) {
+        background-image: url("../assets/filters/ball.svg");
+        margin-left: 40px;
+    }
+
+    & button:nth-child(3) {
+        background-image: url("../assets/filters/bell.svg");
+    }
+
+    & button:nth-child(4) {
+        background-image: url("../assets/filters/cone.svg");
+    }
+
+    & button:nth-child(5) {
+        background-image: url("../assets/filters/snowflake.svg");
+    }
+
+    & button:last-child {
+        background-image: url("../assets/filters/toy.svg");
+    }
+
+    & button {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        background-size: cover;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    & .active {
+        filter: brightness(0) saturate(100%) invert(73%) sepia(44%) saturate(287%) hue-rotate(8deg) brightness(91%) contrast(96%);
+    }
+}
+
+.color_filters {
+    & button {
+        width: 30px;
+        height: 30px;
+        margin: 15px 10px;
+        border-radius: 5px;
+    }
+
+    & button:nth-child(2) {
+        background-color: #ffffff;
+        margin-left: 40px;
+    }
+
+    & button:nth-child(3) {
+        background-color: yellow;
+    }
+
+    & button:nth-child(4) {
+        background-color: red;
+    }
+
+    & button:nth-child(5) {
+        background-color: blue;
+    }
+
+    & button:last-child {
+        background-color: green;
+    }
+
+    & .active {
+        outline: auto;
+    }
+}
+
+.size_filters {
+    & button {
+        background-image: url("../assets/filters/ball.svg");
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        background-repeat: no-repeat;
+    }
+
+    & button:nth-child(2) {
+        margin-left: 40px;
+        background-size: 50px 50px;
+    }
+
+    & button:nth-child(3) {
+        background-size: 40px 40px;
+    }
+
+    & button:nth-child(4) {
+        background-size: 32px 32px;
+    }
+
+    & .active {
+        filter: brightness(0) saturate(100%) invert(73%) sepia(44%) saturate(287%) hue-rotate(8deg) brightness(91%) contrast(96%);
+    }
+}
+
+// range filters
+
+.range_filters {
+    &__block {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+    }
+
+    &__minmax {
+       @extend %font-secondary;
+    padding: 7px 20px 5px;
+    @extend %font-color;
+    @include font(1.8rem, 2.2rem, 400, normal);
+    border-radius: 20px;
+    @extend %blurBg;
+    @extend %border;
+
+     & p {
+        padding: 0;
+        margin:0 ;
+     }
+
+    }
+}
+
+.range_filter__range{
+    position: relative;
+    pointer-events: none;
+
+    & input[type="range"]{
+        height: 2em;
+        display: block;
+        margin: 0;
+                
+      }
+   
+    & input[type="range"]:last-child{
+        margin-top: -2em;
+      }  
+  }
+  
+   
+  input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+  }
+  input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+  }
+  input[type="range"]::-ms-thumb {
+    pointer-events: all;
+  }
+
+  input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 340px;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #24c5db;
+  border-radius: 0.5rem;
+  height: 2px;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -7px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+// input[type="range"]:focus::-webkit-slider-thumb {
+//   outline: 3px solid #ffffff;
+//   outline-offset: 0.125rem;
+// }
+

@@ -1,0 +1,67 @@
+// html body h1--h6 box-sizing
+
+html {
+    font-size: 10px;
+}
+
+section, main, footer, header, article {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Steppe';
+    src: url('/Users/Lenovo/Documents/training/Christmas/saas/steppe/Web-PS/Steppe.woff2') format('woff2'), /* Modern Browsers */
+         url('/Users/Lenovo/Documents/training/Christmas/saas/steppe/OpenType-PS/Steppe.otf') format('opentype'); /* Safari, Android, iOS */
+        
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin: 0;
+    @extend %font-primary;
+    @extend %font-color;
+    @include font(5.3rem, 5.8rem, 400, normal);
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    @extend %font-secondary;
+    @extend %font-color;
+    @include font(2.0rem, 2.4rem, 400, normal);
+    text-align: center;
+}
+
+
+.catalog-main {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog-body {
+    background-color: $color-primary;
+}
+
+[data-tooltip] {
+    position: relative; 
+   }
+
+   [data-tooltip]::after {
+    content: attr(data-tooltip); 
+    position: absolute; 
+    width: 250px; 
+    left: 20px; bottom: 5px; 
+    background: $color-link; 
+    @extend %font-secondary;
+    @extend %font-color;
+    @include font(1.4rem, 1.8rem, 400, normal);
+    padding: 0.5em; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    pointer-events: none; 
+    opacity: 1; 
+    transition: 0.3s; 
+    border-radius: 10px;
+   } 

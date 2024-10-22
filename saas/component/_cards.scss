@@ -1,0 +1,75 @@
+.cards {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.toy {
+    min-width: 280px;
+    max-width: 280px;
+    @extend %font-secondary;
+    padding: 10px 10px;
+    @extend %font-color;
+    @include font(1.8rem, 2.2rem, 400, normal);
+    border-radius: 10px;
+    @extend %blurBg;
+    @extend %border;
+    position: relative;
+
+    &__content {
+        display: flex;
+        align-items: start;
+    }
+
+    &__image {
+        width: 90px;
+        object-fit: contain;
+    }
+
+    &__features {
+        list-style: none;
+        padding-left: 20px;
+
+        >span {
+            font-weight: 700;
+        }
+    }
+
+    &__feature {
+        padding: 9px 0px;
+    }
+
+    &__icon {
+        width: 95px;
+        height: 40px;
+        display: block;
+        // box-sizing: content-box;
+        position: absolute;
+        bottom: 40px;
+        left: -10px;
+        cursor: pointer;
+
+
+           & > polyline {
+                fill: $color-svg;
+                
+            }
+            & > .polyline-favorite {
+                fill: $color-selected;
+           
+            }
+
+    }
+
+}
+
+.not_found_text {
+    @extend %font-secondary;
+    text-align: center;
+    @extend %font-color;
+    @include font(1.8rem, 2.2rem, 400, normal);
+}
+

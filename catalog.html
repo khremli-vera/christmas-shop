@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="catalog-body">
+    <header class="header">
+      <nav class="header__navigation">
+        <img src="assets/logo/tree.svg" />
+        <ul class="navigation">
+          <li class="nav__item nav__item-active">Игрушки</li>
+          <!-- <li class="nav__item">Елка</li> -->
+        </ul>
+      </nav>
+      <div class="header__search">
+        <form class="search_form">
+          <input
+            class="search_form__item"
+            type="text"
+            value=""
+            placeholder="Search..."
+            autofocus
+          />
+          <img class="search_form__icon" src="assets/logo/search.png" />
+          <span class="search_form__clear">&#10006;</span>
+        </form>
+      </div>
+      <div class="header__favorites favorites">
+        <p class="favourites__count">0</p>
+      </div>
+    </header>
+    <main class="catalog-main">
+      <div class="filters">
+        <div class="filters__block">
+          <h2 class="filters__title">Фильтры по значению</h2>
+          <div class="option_filters">
+            <div class="shape_filters">
+              <span class="filters__subtitle">Форма: </span>
+              <button data-filter="шар"></button>
+              <button data-filter="колокольчик"></button>
+              <button data-filter="шишка"></button>
+              <button data-filter="снежинка"></button>
+              <button data-filter="фигурка"></button>
+            </div>
+            <div class="color_filters">
+              <span class="filters__subtitle">Цвет: </span>
+              <button data-filter="белый"></button>
+              <button data-filter="желтый"></button>
+              <button data-filter="красный"></button>
+              <button data-filter="синий"></button>
+              <button data-filter="зеленый"></button>
+            </div>
+            <div class="size_filters">
+              <span class="filters__subtitle">Размер: </span>
+              <button data-filter="большой"></button>
+              <button data-filter="средний"></button>
+              <button data-filter="малый"></button>
+            </div>
+          </div>
+          <div class="favorite_filter">
+            <span class="filters__subtitle">Только любимые: </span>
+            <input class="favorite_filter__checkbox" type="checkbox" />
+          </div>
+        </div>
+        <div class="filters__block">
+          <h2 class="filters__title">Фильтры по диапазону</h2>
+          <div class="range_filters">
+            <div class="number_filter">
+              <span class="filters__subtitle">Количество экземпляров: </span>
+              <div class="range_filters__block">
+                <div class="range_filters__minmax">
+                  <p>1</p>
+                </div>
+                <div class="range_filter__range">
+                  <input type="range" min="1" step="1" max="12" value="1" />
+                  <input type="range" min="1" step="1" max="12" value="12" />
+                </div>
+                <div class="range_filters__minmax">
+                  <p>12</p>
+                </div>
+              </div>
+            </div>
+            <div class="year_filter">
+              <span class="filters__subtitle">Год приобретения: </span>
+              <div class="range_filters__block">
+                <div class="range_filters__minmax">
+                  <p>1940</p>
+                </div>
+                <div class="range_filter__range">
+                  <input
+                    type="range"
+                    min="1940"
+                    step="10"
+                    max="2020"
+                    value="1940"
+                  />
+                  <input
+                    type="range"
+                    min="1940"
+                    step="10"
+                    max="2020"
+                    value="2020"
+                  />
+                </div>
+                <div class="range_filters__minmax">
+                  <p>2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filters__block">
+          <h2 class="filters__title">Сортировка:</h2>
+          <div class="flex_column_left">
+            <select name="select" class="filters__select">
+              <option value="sort_title_inc" selected>
+                По названию от «А» до «Я»
+              </option>
+              <option value="sort_title_dec">По названию от «Я» до «А»</option>
+              <option value="sort_amount_inc">
+                По количеству по возрастанию
+              </option>
+              <option value="sort_amount_dec">По количеству по убыванию</option>
+            </select>
+            <input
+              type="button"
+              class="filters__button"
+              value="Сброс фильтров"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="not_found_text"></p>
+      </div>
+      <div class="cards"></div>
+    </main>
+    <footer class="footer">
+      <p class="footer__author">Вера Хремли</p>
+      <a class="logo" href="#"><img src="assets/logo/rs_school_js 1.png" /></a>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

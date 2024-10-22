@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+    @extend %font-primary;
+    @extend %font-color;
+    @extend %transition;
+    @include font(4.2rem, 4.6rem, 400, normal);
+    list-style: none;
+}
+
+.nav__item {
+padding-right: 40px;
+position: relative;
+
+&-active::after{
+    background-color: $color-link;
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    right: 40px;
+    height: 3px;
+    }
+}
+

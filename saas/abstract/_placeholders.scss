@@ -1,0 +1,37 @@
+// font famile , transition
+
+%font-primary{
+    font-family: "Neucha", cursive;
+}
+
+%font-secondary{
+    font-family: "Steppe";
+}
+
+%font-color {
+    color: $color-font;
+}
+
+%radius {
+    border-radius: 30px;
+}
+
+
+%blurBg {
+backdrop-filter: blur(31px);
+background: radial-gradient(circle at center, rgba(36, 197, 219, 0.15) 0, rgba(36, 197, 219, 0) 100%);
+
+}
+
+%border {
+    border-width: 2px;
+border-style: solid;
+border-color: #24C5DB;
+}
+
+%thin-border {
+    border-width: 1px;
+}
+%transition {
+    transition: all .3s;
+}

@@ -1,0 +1,8 @@
+// fonts, clolumns , media queries
+
+@mixin font ($size, $height, $weight, $style: normal) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+}

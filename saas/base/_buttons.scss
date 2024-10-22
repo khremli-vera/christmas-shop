@@ -1,0 +1,12 @@
+.button {
+    @extend %font-secondary;
+    padding: 13px 119px;
+    @extend %font-color;
+    cursor: pointer;
+    @extend %transition;
+    @include font(2.4rem, 2.8rem, 400, normal);
+    @extend %radius;
+    @extend %blurBg;
+    @extend %border;
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.favorites {
+  background-size: cover;
+  background-image: url("../assets/logo/ball-2.svg");
+  width: 58px;
+  height: 78px;
+  position: relative;
+}
+
+.favourites__count {
+  position: absolute;
+  color: $color-selected;
+  right: -7px;
+  bottom: 25px;
+  @extend %font-secondary;
+  // background-color: $color-link;
+  @extend %font-color;
+
+  @include font(2.4rem, 2.8rem, 400, normal);
+}

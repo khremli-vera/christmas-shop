@@ -1,0 +1,37 @@
+.search_form {
+    position: relative;
+
+    &__item {
+        @extend %font-secondary;
+        padding: 9px 60px 9px 14px;
+        @extend %font-color;
+        @include font(1.6rem, 1.9rem, 400, normal);
+        @extend %radius;
+        @extend %blurBg;
+        @extend %border;
+        @extend %thin-border;
+        width: 254px;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        height: 24px;
+        margin: auto;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__clear {
+        position: absolute;
+        right: 40px;
+        top: 15px;
+        
+        height: 20px;
+        margin: auto;
+        cursor: pointer;
+        color: white;
+    }
+}

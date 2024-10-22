@@ -1,0 +1,21 @@
+.header {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+    align-items: center;
+    padding: 0 84px;
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__favorites {
+       
+    }
+
+    
+}
+
