@@ -365,13 +365,17 @@ html {
   font-size: 10px;
 }
 
-section, main, footer, header, article {
+section,
+main,
+footer,
+header,
+article {
   display: block;
 }
 
 @font-face {
   font-family: "Steppe";
-  src: url("/Users/Lenovo/Documents/training/Christmas/saas/steppe/Web-PS/Steppe.woff2") format("woff2"), url("/Users/Lenovo/Documents/training/Christmas/saas/steppe/OpenType-PS/Steppe.otf") format("opentype"); /* Safari, Android, iOS */
+  src: url("/saas/steppe/Web-PS/Steppe.woff2") format("woff2"), url("/saas/steppe/OpenType-PS/Steppe.otf") format("opentype"); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
