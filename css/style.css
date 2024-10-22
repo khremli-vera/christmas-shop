@@ -375,7 +375,7 @@ article {
 
 @font-face {
   font-family: "Steppe";
-  src: url("/saas/steppe/Web-PS/Steppe.woff2") format("woff2"), url("/saas/steppe/OpenType-PS/Steppe.otf") format("opentype"); /* Safari, Android, iOS */
+  src: url("../saas/steppe/Web-PS/Steppe.woff2") format("woff2"), url("../saas/steppe/OpenType-PS/Steppe.otf") format("opentype"); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
